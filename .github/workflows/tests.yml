@@ -18,8 +18,8 @@ jobs:
     strategy:
       matrix:
         # A bottle is poured on the macOS it was built for and newer: build on each supported
-        # version (backstage needs macOS 14.2+). Apple Silicon only.
-        os: [ macos-14, macos-15, macos-26 ]
+        # version GitHub still offers (backstage needs 14.2+; 14 builds from source). Apple Silicon only.
+        os: [ macos-15, macos-26 ]
       fail-fast: false
     runs-on: ${{ matrix.os }}
     permissions:

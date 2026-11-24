@@ -11,7 +11,7 @@ backstage install     # skills for Claude Code, Codex and Grok (--hooks: also th
 ```
 
 Installing by the full name trusts this tap's formula (Homebrew asks you to trust third-party
-taps). Prebuilt bottles cover macOS 14, 15 and 26+ on Apple Silicon; other Macs build from
+taps). Prebuilt bottles cover macOS 15 and later on Apple Silicon; other Macs build from
 source, which needs Xcode.
 
 After `brew upgrade backstage`, restart the daemon so it runs the new version (this quits the
