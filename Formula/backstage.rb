@@ -1,8 +1,8 @@
 class Backstage < Formula
   desc "Lets agents drive macOS apps on an invisible display, off the user's screen"
   homepage "https://github.com/andrewfitz/backstage"
-  url "https://github.com/andrewfitz/backstage/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "27911dacc5f81dc67a464bd3156f75f058efa7c7f32ece24249d95c951260c87"
+  url "https://github.com/andrewfitz/backstage/archive/refs/tags/v1.2.2.tar.gz"
+  sha256 "4a3e785cab23b28790823001ce9be4d9f1c471a4f4d3734faee5d312a8d448cf"
   head "https://github.com/andrewfitz/backstage.git", branch: "main"
 
   livecheck do
@@ -24,7 +24,7 @@ class Backstage < Formula
     (lib/"backstage").mkpath
     system "xcrun", "clang", "-dynamiclib", "-O2", "-arch", "arm64", "-arch", "x86_64",
            "-mmacosx-version-min=14.0", "-framework", "CoreAudio",
-           "-install_name", "@rpath/libbackstage-inaudible.dylib",
+           "-install_name", "@rpath/libbackstage-inaudible.dylib", "-Wl,-headerpad_max_install_names",
            "-o", lib/"backstage/libbackstage-inaudible.dylib",
            "Sources/BackstageInaudible/inaudible.c"
   end
