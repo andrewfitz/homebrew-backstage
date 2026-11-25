@@ -10,7 +10,6 @@ class Backstage < Formula
     strategy :github_latest
   end
 
-
   depends_on xcode: :build
   depends_on macos: :sonoma
 
