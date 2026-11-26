@@ -1,19 +1,13 @@
 class Backstage < Formula
   desc "Lets agents drive macOS apps on an invisible display, off the user's screen"
   homepage "https://github.com/andrewfitz/backstage"
-  url "https://github.com/andrewfitz/backstage/archive/refs/tags/v1.3.3.tar.gz"
-  sha256 "54b92ef6b55f3929264d96d2e87828102bee0fa7c663c770a110c6edf2f37faa"
+  url "https://github.com/andrewfitz/backstage/archive/refs/tags/v1.3.4.tar.gz"
+  sha256 "3fd16b615f400691a2af31982b0475ffb58e27b679039148ced4124a196d42d2"
   head "https://github.com/andrewfitz/backstage.git", branch: "main"
 
   livecheck do
     url :stable
     strategy :github_latest
-  end
-
-  bottle do
-    root_url "https://github.com/andrewfitz/homebrew-backstage/releases/download/backstage-1.3.3"
-    sha256 cellar: :any, arm64_tahoe:   "d4e414d7284a4d319fcd1c5db1245cdcff83ebb26314b94bd73df8b71ba9f829"
-    sha256 cellar: :any, arm64_sequoia: "be84cc30b043da4995563a2213f1cac791a42fe0bbc2483a86e8d584799e1d1a"
   end
 
   depends_on xcode: :build
